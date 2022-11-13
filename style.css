@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*{
+    
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+}
+
+.body
+{
+    
+}
+
+#wobble{
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+
+#wobble{
+    position: relative;
+    height:370px;
+    width:340px;
+    margin-left: 0% !important;
+    margin-top: 60px !important; 
+        animation-name: floating;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+     
+    @keyframes floating {
+        0% { transform: translate(0,  0px); }
+        50%  { transform: translate(0, 30px); }
+        100%   { transform: translate(0, -0px); }   
+    }
+
+    .bd{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .card{
+        margin-top: 70px;
+    }
+.card p{
+   /* font-family: 'Lato', sans-serif; */
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    padding-top: 5px;
+}
+
+.box{
+    height: 300px;
+    width:350px;
+    
+   margin-top: 20px;
+    /* From https://css.glass */
+    /*background-color: rgba(255, 255, 255, 0.151); /* transparent white */
+    
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.621) , rgba(219, 219, 219, 0.169));
+  
+    display:inline-block;
+    align-items: center;
+    align-content: center;
+    border-radius: 15px;
+    padding: 10px;
+    -webkit-box-shadow: 0 3px 5px -3px #000;
+-moz-box-shadow: 0 3px 5px -3px #000;
+box-shadow: 0 3px 5px -3px #000;
+   
+}
+#hds{
+    font-size: 30px;
+    padding: 9px 9px;
+    font-family: 'Oswald', sans-serif;
+}
+
+input{
+   position: relative;
+   padding: 10px;
+   margin-top:10px;
+   margin:10px;
+
+   height: 40px;
+   width:140px;
+   border-radius: 10px;
+   border-style: none;
+align-items: center;
+font-family: 'Oswald', sans-serif;
+}
+
+#p{
+    position: relative;
+    height:40px;
+    width: 160px;
+border-radius: 20px;
+background-color: black;
+color: whitesmoke; 
+align-self: center;
+left:25%;
+margin-top: 20px;
+/*font-family: 'Oswald', sans-serif; */
+z-index: 0;
+border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+/* #p:hover{
+height: 50px;
+width:170px;
+background-color: white;
+color: black;
+left:20%;
+margin-top:15px;
+border-style: none;
+
+}
+*/
+
+#p:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#p:active {
+    color: #000
+}
+
+#p:active:after {
+    background: transparent;
+}
+
+#p:hover:before {
+    opacity: 1;
+}
+
+#p:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
